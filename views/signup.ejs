@@ -1,0 +1,73 @@
+<%- include('./includes/header.ejs') %>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <%- include('./includes/navbar.ejs') %>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <h4 class="mb-3 text-center">Sign Up Form</h4>
+            <form action="/signup" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstname" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastname" placeholder="" value="" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="username">Username</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">@</span>
+                      </div>
+                      <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Your username is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="image">Image</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="form-control-file" name="imageFile" >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-3">
+                    <input class="form-check-input" type="checkbox" name="role" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Admin</label>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                  </div>
+
+                  
+                  <div class="mb-3">
+                    <label for="confirmpassword">Re Enter Password</label>
+                    <input type="password" class="form-control" name="confirmpassword" id="confirmpassword">
+                  </div>
+
+                  <hr class="mb-4">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Sign Up</button>
+            </form>
+          </div>
+      </div>
+  </div>
+  <%- include('./includes/footer.ejs') %>

@@ -1,0 +1,62 @@
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999; /* Behind the navbar */
+    padding: 70px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  .message
+  {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    max-width: 10cm;
+    text-align: left;
+  }
+
+  .message.send{
+    
+    background-color: tomato;
+    border-radius: 10px 10px 0px 10px;
+  }
+
+  .message.receive
+  {
+    background-color: teal;
+    border-radius: 10px 10px 10px 0px;
+
+  }
+
+  li.media:hover
+  {
+    background-color:rgb(195, 200, 201);
+  }
+
+  .chat-list-profile-img
+  {
+    width: 50px;
+    height: 50px;
+  }
+
+  .chat-profile-img
+  {
+    width: 20px ;
+    height: 20px;
+  }
+  .half-status
+  {
+    max-width: 150px;
+  }
